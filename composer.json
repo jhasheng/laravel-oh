@@ -1,0 +1,12 @@
+{
+    "name": "jhasheng/openssl-helper",
+    "authors": [
+        {
+            "name": "jhasheng",
+            "email": "jhasheng@hotmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.5"
+    }
+}
