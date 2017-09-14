@@ -52,23 +52,13 @@ class OHCACommand extends Command
             ->setCommonName($commonName);
 
         if ($type == 'intermediate') {
-            $cf->setCa($rootCA);
             $name = sprintf('%s/%s', $rootCA, $name);
         } elseif ($type == 'server') {
             $name = sprintf('%s/%s', $rootCA, $name);
-            $cf->setCa($rootCA);
-            $alt = $cf->getAltNames();
-            array_walk($dns, function ($v) use ($alt) {
-                $alt->setDns($v);
-            });
-            array_walk($url, function ($v) use ($alt) {
-                $alt->setUrl($v);
-            });
-            array_walk($ip, function ($v) use ($alt) {
-                $alt->setIp($v);
-            });
+            $cf->getAltNames()->setDns($dns)->setUrl($url)->setIp($ip);
         }
         $cf->setType($type)
+            ->setCa($rootCA)
             ->setName($name)
             ->sign()->toFile();
     }

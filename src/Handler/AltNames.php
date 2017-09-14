@@ -35,9 +35,9 @@ class AltNames
      * @param mixed $ip
      * @return AltNames
      */
-    public function setIp($ip)
+    public function setIp(array $ip)
     {
-        $this->ip[] = $ip;
+        $this->ip = $ip;
         return $this;
     }
 
@@ -53,9 +53,9 @@ class AltNames
      * @param mixed $dns
      * @return AltNames
      */
-    public function setDns($dns)
+    public function setDns(array $dns)
     {
-        $this->dns[] = $dns;
+        $this->dns = $dns;
         return $this;
     }
 
@@ -71,9 +71,9 @@ class AltNames
      * @param mixed $url
      * @return AltNames
      */
-    public function setUrl($url)
+    public function setUrl(array $url)
     {
-        $this->url[] = $url;
+        $this->url = $url;
         return $this;
     }
 
