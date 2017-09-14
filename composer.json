@@ -1,5 +1,6 @@
 {
-    "name": "jhasheng/openssl-helper",
+    "name": "jhasheng/laravel-oh",
+    "keywords": "laravel ca openssl",
     "authors": [
         {
             "name": "jhasheng",
