@@ -35,7 +35,3 @@ php artisan oh:ca -T intermediate
 # 生成 web 服务端证书
 php artisan oh:ca -T server -A example.com
 ```
-
-## Thanks
-
-[may-encrypt](https://github.com/MayMeow/may-encrypt)
