@@ -15,8 +15,6 @@
 
 ## 安装
 
-- 安装依赖
-
 ```bash
 composer reqiure jhasheng/laravel-oh
 

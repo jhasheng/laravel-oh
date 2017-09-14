@@ -11,5 +11,10 @@
         "ext-openssl": "*",
         "php": ">=7.0",
         "laravel/framework": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Purple\\OpensslHelper\\": "src/"
+        }
     }
 }
