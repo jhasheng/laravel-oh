@@ -14,7 +14,8 @@ class OpensslHelperServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/Config/openssl.php' => config_path('openssl.php')
+            __DIR__ . '/Config/openssl.php' => config_path('openssl.php'),
+            __DIR__ . '/Config/templates' => storage_path('openssl/templates'),
         ]);
     }
 }

@@ -23,8 +23,6 @@ php artisan vendor:publish
 
 ## 命令
 
-- `T|type` 类型
-
 ```bash
 # 生成根证书
 php artisan oh:ca
