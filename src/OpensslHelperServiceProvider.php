@@ -12,5 +12,9 @@ class OpensslHelperServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([OHCACommand::class]);
         }
+
+        $this->publishes([
+            __DIR__ . '/Config/openssl.php' => config_path('openssl.php')
+        ]);
     }
 }
