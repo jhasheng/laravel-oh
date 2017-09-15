@@ -16,9 +16,14 @@
 ## 安装
 
 ```bash
+# 安装依赖
 composer reqiure jhasheng/laravel-oh
 
+# 生成配置
 php artisan vendor:publish
+
+# 添加 SP 到 config/app.php
+\Purple\OpensslHelper\OpensslHelperServiceProvider::class
 ```
 
 ## 命令
