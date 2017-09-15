@@ -274,6 +274,7 @@ class CertificateFactory implements CertificateFactoryInterface
         if ($pkcs12) {
             openssl_pkcs12_export_to_file($this->crt->getSignedCert(), $this->fileName . '/cert.pfx', $this->crt->getPrivateKey(), $this->crt->getEncryptionPass(), $this->certConfigure);
         }
+        return $this->fileName;
     }
 
 

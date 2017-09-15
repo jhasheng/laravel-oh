@@ -57,9 +57,15 @@ class OHCACommand extends Command
             $name = sprintf('%s/%s', $rootCA, $name);
             $cf->getAltNames()->setDns($dns)->setUrl($url)->setIp($ip);
         }
-        $cf->setType($type)
+        $savePath = $cf->setType($type)
             ->setCa($rootCA)
             ->setName($name)
             ->sign()->toFile();
+
+        if ($savePath) {
+            $this->info(sprintf('OK, save path: %s', $savePath));
+        } else {
+            $this->info('generate certificate failed!');
+        }
     }
 }
