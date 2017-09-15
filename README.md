@@ -19,11 +19,11 @@
 # 安装依赖
 composer reqiure jhasheng/laravel-oh
 
-# 生成配置
-php artisan vendor:publish
-
 # 添加 SP 到 config/app.php
 \Purple\OpensslHelper\OpensslHelperServiceProvider::class
+
+# 生成配置
+php artisan vendor:publish
 ```
 
 ## 命令
@@ -36,8 +36,8 @@ php artisan oh:ca
 php artisan oh:ca -T intermediate
 
 # 生成 web 服务端证书
-php artisan oh:ca -T server -A example.com -D *.example.com -D *.foo.com -D foo.com -I 192.168.1.123
 # 生成的证书可用于 exmaple.com 及其所有的二级域名，foo.com 及基所有的二级域名，IP 地址为 192.168.1.123
+php artisan oh:ca -T server -A example.com -D *.example.com -D *.foo.com -D foo.com -I 192.168.1.123
 ```
 
 ## 参数说明
